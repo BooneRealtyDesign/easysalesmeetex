@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Lesson Template</title>
+  <meta name="description" content="A reusable interactive lesson template (static HTML/CSS/JS)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optional Google Font; replace or remove if you prefer system fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <img class="brand__logo" src="media/Balloon Logo No Text.png" alt="Boone Realty Logo" onerror="this.style.display='none'"/>
+      <div class="brand__text">
+        <div class="brand__name" id="brandName">Your Organization</div>
+        <div class="brand__lesson" id="lessonTitle">Monthly Lesson</div>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <div class="topbar__progress" aria-label="Lesson progress">
+        <div class="pill" id="progressPill">0% complete</div>
+        <div class="progress">
+          <div class="progress__bar" id="progressBar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <button class="btn btn--ghost" id="btnHelp" type="button" aria-haspopup="dialog" aria-controls="helpModal">
+        Help
+      </button>
+      <a class="btn btn--primary" id="btnCtaTop" href="#" target="_blank" rel="noopener" style="display:none;">Call to Action</a>
+    </div>
+  </header>
+
+  <div class="app app--scroll">
+    <!-- Sidebar / navigation -->
+    <aside class="sidebar" aria-label="Lesson navigation">
+      <div class="sidebar__title">Lesson Sections</div>
+      <nav class="toc" id="toc" aria-label="Table of contents">
+        <!-- dynamically filled -->
+      </nav>
+
+      <div class="sidebar__footer">
+        <button class="btn btn--ghost btn--block" id="btnReset" type="button">
+          Reset progress
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main content (scrollable) -->
+    <main class="main main--scroll" id="main">
+      <div class="scrolldeck" id="scrolldeck" aria-label="Lesson content">
+        <div class="sections sections--snap" id="sections">
+          <!-- dynamically filled -->
+        </div>
+
+        <footer class="page-footer">
+          <span id="footerLeft">© <span id="year"></span> Your Organization</span>
+          <span class="dot">•</span>
+          <a href="#" id="footerLink" target="_blank" rel="noopener">boonerealty.com</a>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Help modal -->
+  <dialog class="modal" id="helpModal" aria-label="Help dialog">
+    <form method="dialog" class="modal__inner">
+      <div class="modal__header">
+        <h2>How to edit this lesson</h2>
+        <button class="btn btn--ghost" value="cancel" aria-label="Close">✕</button>
+      </div>
+      <div class="modal__content">
+        <ol>
+          <li>Open <code>content/lesson-data.js</code></li>
+          <li>Edit the <code>LESSON</code> object (title, slides, links)</li>
+          <li>Refresh the browser to see changes</li>
+        </ol>
+        <p><strong>Tip:</strong> Keep your monthly changes in <code>lesson-data.js</code> so the template stays stable.</p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--primary" value="cancel">Got it</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Load content first, then app -->
+  <script src="content/lesson-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
