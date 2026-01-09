@@ -35,7 +35,7 @@ window.LESSON = {
             "Instead of asking AI to help you check things off a list, you’ll practice using it to think more strategically about systems, patterns, and long-term improvement."
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     {
@@ -57,7 +57,7 @@ window.LESSON = {
           ]
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     {
@@ -76,7 +76,7 @@ window.LESSON = {
           ]
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     /* ======================================================
@@ -145,7 +145,7 @@ window.LESSON = {
           body: "Where does your business currently feel reactive instead of intentional?"
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     /* ======================================================
@@ -169,7 +169,7 @@ window.LESSON = {
           ]
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     {
@@ -240,7 +240,7 @@ window.LESSON = {
           ]
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     {
@@ -300,7 +300,7 @@ window.LESSON = {
           ]
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     {
@@ -346,7 +346,7 @@ window.LESSON = {
             "Which parts of your business should always require human review before anything is shared with clients?"
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     /* ======================================================
@@ -427,7 +427,7 @@ window.LESSON = {
             "Choose one real client challenge. Walk it through all four stages of the growth loop. Identify one improvement you can implement immediately."
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     },
 
     /* ======================================================
@@ -448,7 +448,8 @@ window.LESSON = {
           ]
         }
       ],
-      markCompleteOnView: true
+      markCompleteOnView: false
     }
   ]
 };
+
